@@ -1,3 +1,5 @@
 #!/bin/bash
-curl -sI "$1" | grep -i Content-Length | cut -d " " -f2
+#send a request that url,and display the size of the body of the repsonse
+curl -s "${1}" | wc -c
+
 
